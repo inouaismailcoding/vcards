@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez-moi</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        .contact-form { display: flex; flex-direction: column; gap: 10px; }
+        input, textarea { padding: 8px; border: 1px solid #ddd; border-radius: 4px; }
+        button { background: #0066ff; color: white; border: none; padding: 10px; cursor: pointer; }
+        button:hover { background: #0055dd; }
+    </style>
+</head>
+<body>
+    <h1>Contactez-moi</h1>
+    <form class="contact-form" action="https://formsubmit.co/votre@email.com" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
