@@ -15,12 +15,25 @@
 </head>
 <body>
     <h1>Contactez-moi</h1>
-    <form class="contact-form" action="https://formsubmit.co/inouaismailcoding@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-        <button type="submit">Envoyer</button>
-    </form>
+   <form class="contact-form" action="https://formsubmit.co/inouaismailcoding@gmail.com" method="POST">
+    <!-- Champs cachés pour personnaliser FormSubmit -->
+    <input type="hidden" name="_subject" value="Nouveau message depuis votre site !">
+    <input type="hidden" name="_autoresponse" value="Merci pour votre message. Je vous répondrai sous 48h.">
+    <input type="hidden" name="_template" value="table"> <!-- Style du mail reçu -->
+    <input type="hidden" name="_next" value="https://votreusername.github.io/merci.html"> <!-- Page de remerciement -->
+
+    <!-- Champs du formulaire -->
+    <input type="text" name="name" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" placeholder="Votre message" required></textarea>
+    
+    <!-- Protection anti-spam (honeypot) -->
+    <input type="text" name="_honey" style="display:none">
+    
+    <!-- Captcha optionnel -->
+    <input type="hidden" name="_captcha" value="false">
+    
+    <button type="submit">Envoyer</button>
+</form>
 </body>
 </html>
